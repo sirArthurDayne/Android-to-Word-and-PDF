@@ -26,7 +26,7 @@ except:
     print("Esa ruta no existe. Verifica el nombre de usuario.")
     sys.exit()
 proyectos = os.listdir()
-meh = [proyectos[6], proyectos[7]]
+#meh = [proyectos[6], proyectos[7]]
 
 # Cambiar a folder nuevo en escritorio
 try:
@@ -36,7 +36,7 @@ except:
     sys.exit()
 
 # Crear documentos por cada proyecto
-for proyecto_i in meh:
+for proyecto_i in proyectos:
     document = docx.Document()
     
     ruta_i = os.path.join(ruta_de_proyectos, proyecto_i)
