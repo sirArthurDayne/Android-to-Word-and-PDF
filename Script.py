@@ -4,6 +4,7 @@ import sys
 import docx2pdf
 
 # ---------- Declaraciones ----------
+#user = input("Ingresa el user de la PC")
 operation = input("1. android to word\n 2. word to pdf\n")
 ruta_de_proyectos = "D:\\Dev\\Proyects\\androidstudio"
 escritorio = "D:\\vainas de la U\\desarrolloMovil"
