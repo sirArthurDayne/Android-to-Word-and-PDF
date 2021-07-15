@@ -51,7 +51,6 @@ except:
     print("Esa ruta no existe. Verifica el nombre de usuario.")
     sys.exit()
 proyectos = os.listdir()
-#meh = [proyectos[26]]
 
 # Cambiar a folder nuevo en escritorio -->
 try:

@@ -1,3 +1,4 @@
 - Instalar librería docx: pip install docx
 - Iniciar programa
 - Ingresar user de windows para que encuentre las rutas donde están ubicados los proyectos de Android
+- Revisar cada Word, por si acaso :p
