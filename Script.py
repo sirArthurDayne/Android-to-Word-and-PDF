@@ -4,11 +4,10 @@ import sys
 import docx2pdf
 
 # ---------- Declaraciones ----------
-#user = input("Ingresa el user de la PC")
-operation = input("1. android to word\n 2. word to pdf\n")
-ruta_de_proyectos = "D:\\Dev\\Proyects\\androidstudio"
-escritorio = "D:\\vainas de la U\\desarrolloMovil"
-wordToPdf = "D:\\vainas de la U\\desarrolloMovil\\Word to Pdf"
+user = input("Ingresa el user de la PC: ")
+operation = input("\n1. android to word\n 2. word to pdf\n")
+ruta_de_proyectos = "C:\\Users\\{}\\AndroidStudioProjects".format(user)
+escritorio = "C:\\Users\\{}\\Desktop".format(user)
 try:
     os.mkdir(os.path.join(escritorio, "Android a Word"))
 except:
@@ -105,14 +104,14 @@ elif operation == "2":
     wordList = os.listdir()
     #crea carpeta para guardar los pdf y se mueve para alla
     try:
-        os.mkdir(wordToPdf)
+        os.mkdir(os.path.join(escritorio, "Word to Pdf"))
     except:
         pass
     #se cambia a la ruta de los pdf
     try:
-        os.chdir(wordToPdf)
+        os.chdir(os.path.join(escritorio, "Word to Pdf"))
     except:
-        print("ruta para pdf no encontradaa")
+        print("ruta para pdf no encontrada")
         sys.exit()
 
     #itera cada word encontrado y convierte a pdf
@@ -120,4 +119,4 @@ elif operation == "2":
         print(word_i)
         if es_docx(word_i):
             filename, f_ext = os.path.splitext(word_i)#recupera nombre del archivo
-            docx2pdf.convert(os.path.join(escritorio, f"Android a Word//{word_i}"), os.path.join(wordToPdf, f"{filename}.pdf"))#nombre del pdf
+            docx2pdf.convert(os.path.join(escritorio, f"Android a Word//{word_i}"), os.path.join(escritorio, f"Word to Pdf//{filename}.pdf"))#nombre del pdf
